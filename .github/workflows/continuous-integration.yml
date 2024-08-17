@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/appointment-service:latest -f Dockerfile .
+        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/appointment-service:latest -f dockerfile .
         working-directory: hospital-management/appointment-service
 
       - name: Push Docker Image
@@ -40,7 +40,7 @@ jobs:
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
       - name: Build Docker Image for case-service
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/case-service:latest -f Dockerfile .
+        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/case-service:latest -f dockerfile .
         working-directory: hospital-management/case-service
 
       - name: Push Docker Image for case-service
@@ -60,7 +60,7 @@ jobs:
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
       - name: Build Docker Image for directory-service
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/directory-service:latest -f Dockerfile .
+        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/directory-service:latest -f dockerfile .
         working-directory: hospital-management/directory-service
 
       - name: Push Docker Image for directory-service
@@ -80,7 +80,7 @@ jobs:
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
       - name: Build Docker Image for api-gateway
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/api-gateway:latest -f Dockerfile .
+        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/api-gateway:latest -f dockerfile .
         working-directory: hospital-management/api-gateway
 
       - name: Push Docker Image for api-gateway
@@ -100,7 +100,7 @@ jobs:
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
       - name: Build Docker Image for patient-service
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/patient-service:latest -f Dockerfile .
+        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/patient-service:latest -f dockerfile .
         working-directory: hospital-management/patient-service
 
       - name: Push Docker Image for patient-service
