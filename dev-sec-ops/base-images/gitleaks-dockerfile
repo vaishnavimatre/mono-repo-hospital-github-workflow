@@ -1,6 +1,5 @@
 FROM ghcr.io/gitleaks/gitleaks:latest
 
-
-WORKDIR /path
+WORKDIR  /path
 
 ENTRYPOINT [ "gitleaks" ]
