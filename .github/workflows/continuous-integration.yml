@@ -39,6 +39,7 @@ jobs:
           username: ${{ secrets.DOCKER_REGISTRY_USER }}
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
+
       - name: Build Docker Image for case-service
         run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/case-service:latest -f dockerfile .
         working-directory: hospital-management/case-service
