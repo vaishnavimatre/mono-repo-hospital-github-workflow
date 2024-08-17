@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_REGISTRY_PAT }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY_USER }}/appointment-service:latest -f dockerfile .
+        run: docker build -t  ${{secrets.DOCKER_REGISTRY_USER }}/appointment-service:latest -f dockerfile .
         working-directory: hospital-management/appointment-service
 
       - name: Push Docker Image
