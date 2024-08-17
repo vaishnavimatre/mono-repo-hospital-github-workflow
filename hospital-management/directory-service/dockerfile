@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . /app
 
 # Start the application
-CMD ["java", "-jar", "/app/directory-service.jar"]
+CMD  ["java", "-jar", "/app/directory-service.jar"]
